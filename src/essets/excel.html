@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Pure JavaScript Excel</title>
+</head>
+
+<body>
+
+  <div class="container" id="app">
+
+    <div class="excel">
+      <div class="excel__header">
+
+        <input type="text" class="input" value="Новая таблица" />
+
+        <div>
+
+          <div class="button">
+            <i class="material-icons">delete</i>
+          </div>
+          <!-- end button -->
+          <div class="button">
+            <i class="material-icons">exit_to_app</i>
+          </div>
+          <!-- end button -->
+        </div>
+        <!-- end div for button -->
+
+      </div>
+      <!-- end class="excel__header -->
+
+      <div class="excel__toolbar">
+
+        <div class="button">
+          <i class="material-icons">format_align_left</i>
+        </div>
+        <!-- end button -->
+        <div class="button">
+          <i class="material-icons">format_align_center</i>
+        </div>
+        <!-- end button -->
+        <div class="button">
+          <i class="material-icons">format_align_right</i>
+        </div>
+        <!-- end button -->
+        <div class="button">
+          <i class="material-icons">format_bold</i>
+        </div>
+        <!-- end button -->
+        <div class="button">
+          <i class="material-icons">format_italic</i>
+        </div>
+        <!-- end button -->
+        <div class="button">
+          <i class="material-icons">format_underline</i>
+        </div>
+        <!-- end button -->
+      </div>
+      <!-- end excel__toolbar -->
+
+      <div class="excel__formula">
+        <div class="info">fx</div>
+        <!-- end info -->
+        <div class="input" contenteditable spellcheck="false"></div>
+        <!-- input -->
+
+      </div>
+      <!-- end excel__formula -->
+
+      <div class="excel__table">
+        
+        <div class="row">
+          
+          <div class="row-info"></div>
+          <!-- /.row-info -->
+
+          <div class="row-data">
+            <div class="columns">A</div>
+            <div class="columns">B</div>
+            <div class="columns">C</div>
+            <!-- /.columns -->
+          </div>
+          <!-- /.row-data -->
+
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+
+          <div class="row-info">1</div>
+          <!-- /.row-info -->
+
+          <div class="row-data">
+           <div class="cell selected" contenteditable>A1</div>
+           <div class="cell" contenteditable>B1</div>
+           <div class="cell" contenteditable>C1</div>
+           <!-- /.cell -->
+          </div>
+          <!-- /.row-data -->
+
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+
+          <div class="row-info">2</div>
+          <!-- /.row-info -->
+
+          <div class="row-data">
+           <div class="cell" contenteditable>A2</div>
+           <div class="cell" contenteditable>B2</div>
+           <div class="cell" contenteditable>C2</div>
+           <!-- /.cell -->
+          </div>
+          <!-- /.row-data -->
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- end excel__table -->
+    </div>
+    <!-- end excel -->
+
+  </div>
+  <!-- end container -->
+
+</body>
+
+</html>
