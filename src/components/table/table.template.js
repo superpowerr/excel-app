@@ -3,22 +3,30 @@ const CODES = {
   Z: 90
 }
 
-function toCell() {
+function toCell(_, col) {
   return `
-      <div class="cell" contenteditable></div>
+      <div class="cell" data-col="${col}" contenteditable></div>
   `
 }
 
-function createCol(el) {
+function toColumn(col, index) {
   return `
-    <div class="columns">${el}</div>
+    <div class="columns" data-type="resizeble" data-col="${index}">
+      ${col}
+      <div class="col-resize" data-resize="col"></div> 
+    </div>
   `
 }
 
 function createRow(index, content) {
+  // eslint-disable-next-line max-len
+  const resizer = index ? `<div class="row-resize "data-resize="row"></div>` : ''
   return `
-    <div class="row">
-      <div class="row-info">${index ? index : ''}</div>
+    <div class="row" data-type="resizeble">
+      <div class="row-info">
+        ${index ? index : ''}
+        ${resizer}
+      </div>
       <div class="row-data">${content}</div>
     </div>
   `
@@ -34,7 +42,7 @@ export function createTable(rowsCount = 15) {
   const cols = new Array(colsCount)
       .fill('')
       .map(toChar)
-      .map(createCol)
+      .map(toColumn)
       .join('')
 
   rows.push(createRow(null, cols))
